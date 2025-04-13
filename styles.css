@@ -1,0 +1,482 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Root Element */
+:root {
+    --blue: #1a95f4;
+    --black: #222;
+    --white: #F2F3F4;
+    --pink: #FF9BEE;
+    --green: #26F500;
+    font-size: 16px;
+	--body-font: Arial, sans-serif;
+	--heading-font: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	line-height: 1.25;
+	color: var(--black);
+    font-size: 1.4rem;
+    background-color: #ede8f5;
+}
+
+main, header > p, h1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 1.8rem;
+    font-family: var(--heading-font);
+    padding: 1rem 1rem .5rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3, h4, h5 {
+    font-size: 1.4rem;
+}
+
+main li {
+    padding: 0 1rem;
+}
+
+p {
+    padding: 0 1rem;
+}
+
+table, main ul {
+    margin: 1rem 0;
+}
+
+/* screen-reader only */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+ 
+.sr-only:focus {
+    position:static;
+    width:auto;
+    height:auto;
+}
+
+
+
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,0) 20%);
+}
+
+header > a {
+    grid-row: 1 / 2;
+    width: fit-content;
+}
+
+header svg {
+    max-width: 4.5rem;
+    max-height: 4.5rem;
+    margin: 1rem;
+    fill:rgb(8, 8, 93);
+}
+
+header svg:hover {
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+header nav ul, nav input, header > a span {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+h3 a {
+    padding: 1rem 0;
+    color:rgb(8, 8, 93);
+}
+
+h3 a:hover {
+    color: salmon;
+}
+
+
+
+/* menu */
+nav label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: lightcoral;
+    border-radius: 50%;
+    margin: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+nav input:checked ~ label {
+    box-shadow: inset 0px 0px 15px -5px rgba(0,0,0,1);
+}
+
+nav input:checked ~ ul {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:auto;
+    padding: 6rem 0 1rem 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav input:checked ~ ul a {
+    display: block;
+    text-align: center;
+    width: 90%;
+    background-color: lightcyan;
+    padding: 1rem;
+    margin: 1rem auto;
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav span {
+    border: 2px solid black;
+    display: block;
+    width: 60%;
+    border-radius: 3px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
+    opacity 0.55s ease;
+}
+
+nav input:checked ~ label span:first-child {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+nav input:checked ~ label span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+
+}
+
+nav input:checked ~ label span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+/* end menu */
+
+input, label, textarea, button ,.contact-container{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: .5rem auto;
+    padding: 1rem;
+}
+
+
+
+
+
+/* tables */
+table {
+    font-size: 1rem;
+    margin: 1rem auto;
+    background-color: lightsalmon;
+    outline: 4px solid darkslategrey;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+    text-align: center;
+}
+
+th {
+    max-width: 100px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+td {
+    padding: 5px 0;
+}
+
+
+main img {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+
+
+.return {
+    display: block;
+    color: lightgray;
+    background-color: #222;
+    width: fit-content;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.return:hover {
+    background-color: salmon;
+    color: var(--black);
+}
+
+
+
+
+
+.homeheader > p {
+    
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+#destinations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+#destinations h2, #destinations > p {
+    grid-column: 1 / -1;
+}
+
+#destinations > section{
+    width: 90%;
+    padding: 1rem;
+    border: 4px solid darkslategrey;
+    justify-self: center;
+}
+
+#hawaii {
+    background: linear-gradient(#ede8f5 50%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #ede8f5 53%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #ede8f5 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+    background-size: 110px 200px;
+    background-repeat: repeat-x;
+}
+
+#florida {
+    background: rgb(232,169,0);
+    background: radial-gradient(circle at bottom, rgb(254, 162, 15) 0%, rgb(246, 230, 9) 21%, rgba(255,255,255,1) 80%);
+}
+
+a:focus {
+    outline: 4px solid darkblue;
+    border: none;
+}
+
+.smallimg {
+    max-width: 640px;
+}
+
+input[type="submit"] {
+    background-color: darkslategray;
+    font-weight: bold;
+    color: white;
+    font-size: 1.4rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #ede8f5;
+    color: black;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+footer a {
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 600px) {
+    .homeheader {
+        background: no-repeat bottom url(images/beach-hero-1920px.jpg);
+        background-color: rgba(255,255,255,0.3);
+        background-blend-mode: lighten;
+    }
+
+    .homeheader h1 {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+        color: rgb(8, 8, 93);
+        text-shadow: 0px 0px 8px white;
+    }
+    
+    .homeheader > p {
+        color: rgb(8, 8, 93);
+        padding-bottom: 8rem;
+        text-shadow: 0px 0px 8px white;
+    }
+
+    .homeheader svg {
+        filter:drop-shadow(0px 0px 8px white);
+    }
+
+
+
+    #traveltips {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    #traveltips > p, #traveltips > h2 {
+        grid-column: 1 / -1;
+    }
+
+
+    #destinations {
+        grid-template-columns: 1fr 1fr;
+
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+
+    header nav ul, header > a span {
+        left:0;
+        top:0;
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+
+
+    header > a span {
+        position: absolute;
+        padding: 2.5rem 1rem;
+        left: 6rem;
+        color: rgb(8, 8, 93);
+
+    }
+
+    header > a span:hover {
+        text-decoration: underline;
+    }
+
+    header nav ul {
+        position: absolute;
+        left: 0;
+        right: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        top: 7rem;
+    }
+
+    header nav a {
+        padding: 1rem;
+        text-decoration: none;
+        color: rgb(8, 8, 93);
+        display: block;
+
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    nav label {
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+    }
+    h1 {
+        margin-top: 4rem;
+    }
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+#destinations {
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+footer ul {
+    flex-direction: row;
+}
+}
