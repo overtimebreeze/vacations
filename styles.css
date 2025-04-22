@@ -331,6 +331,13 @@ main img {
     background: radial-gradient(circle at bottom, rgb(254, 162, 15) 0%, rgb(246, 230, 9) 21%, rgba(255,255,255,1) 80%);
 }
 
+#new-orleans {
+    background: linear-gradient(45deg, #ffde0080 20%, transparent 21%, transparent 79%, #ffde00 80%, #ffde00 90%, transparent 91%) , linear-gradient(315deg, #ffde0080 20%, transparent 21%), linear-gradient(45deg, #ffde00 20%, transparent 21%), linear-gradient(315deg, #ffde00 20%, transparent 21%, transparent 79%, #ffde00 80%, #ffde00 90%, transparent 91%);
+        background-size: 3em 3em;
+        background-color: #ffffff;
+        opacity: 0.8
+}
+
 a:focus {
     outline: 4px solid darkblue;
     border: none;
